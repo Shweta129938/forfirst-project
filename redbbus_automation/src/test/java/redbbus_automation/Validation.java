@@ -1,0 +1,35 @@
+package redbbus_automation;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+
+import destination.destiny;
+
+public class Validation {
+	
+	@Test
+	public void test() throws InterruptedException {
+		WebDriver driver =new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.redbus.in");
+		Thread.sleep(30);
+		destiny d=new destiny(driver);
+		Thread.sleep(40);
+		d.From();
+		d.Mumbai();
+		Thread.sleep(40);
+		d.Dest();
+		Thread.sleep(40);
+		d.Delhi();
+		d.Tommorrow();
+		d.Searchbusses();
+		
+		
+		
+		
+		
+	}
+
+}
